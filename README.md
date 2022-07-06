@@ -44,15 +44,15 @@ Access slider attributes through a object of SliderModel and customize the slide
  
 #### Continuous Slider - Usage
 
-##### Inset
+##### Outset
 
 ```ets
-//Creating object 
+//Creating object of the SliderModel class with Slider type a Continue
 private sliderModel: SliderModel = new SliderModel(SliderType.Continue)
 ```
 
 ```ets
-//Customization 
+//Customization of the SliderModel object and mentioning the SliderStyle as Outset
 aboutToAppear(){
     this.sliderModel.setSliderStyle(SliderStyle.OutSet)
     this.sliderModel.setMin(100)
@@ -74,9 +74,11 @@ aboutToAppear(){
 ```
 
 ```ets
-//Passing parameters to MaterialSlider
+//Passing SliderModel object to MaterialSlider and defining the Event onSliderChange
 MaterialSlider({
-    obj : this.sliderModel,
-    onCheckChange: this.onCheckChange
+      obj: this.sliderModel1,
+      onSliderChange:((value: number, mode: SliderChangeMode) => {
+           console.log("Value: " + value + " Mode: " + mode);
+      })
 })
 ```
