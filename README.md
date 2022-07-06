@@ -38,8 +38,8 @@ Access slider attributes through a object of SliderModel and customize the slide
  |           |             |              |
  
  Below are the events that are supported by Slider
- | Name   | Description   |
- | onSliderChange(callback: (value: number, mode: SliderChangeMode) => void)   |  Callback is invoked when the slider slides  <br/> **value** - Current Value of the Slider <br/> **mode** - Dragging state or Mode of the Slider (SliderChangeMode Enum - Begin, Moving, End)    |
+| Name   | Description |
+ | onSliderChange(callback: (value: number, mode: SliderChangeMode) => void)   |  Callback is invoked when the slider slides  <br /> **value** - Current Value of the Slider <br /> **mode** - Dragging state or Mode of the Slider (SliderChangeMode Enum - Begin, Moving, End)    |
  
 #### Continuous Slider - Usage
 
