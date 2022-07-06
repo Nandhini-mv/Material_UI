@@ -43,8 +43,9 @@ Access slider attributes through a object of SliderModel and customize the slide
  | onSliderChange(callback: (value: number, mode: SliderChangeMode) => void)   |  Callback is invoked when the slider slides  <br /> **value** - Current Value of the Slider <br /> **mode** - Dragging state or Mode of the Slider (SliderChangeMode Enum - Begin, Moving, End)    |
  
 #### Continuous Slider - Usage
+Continuous sliders allow users to make selections that don’t require a specific value. These sliders are often used to adjust brightness or volume.
 
-##### Outset
+##### OutSet
 
 ```js
 //Creating object of the SliderModel class with Slider type as Continue
@@ -79,7 +80,7 @@ MaterialSlider({
 })
 ```
 
-##### Inset
+##### InSet
 
 ```js
 //Creating object of the SliderModel class with Slider type as Continue 
@@ -112,4 +113,77 @@ MaterialSlider({
            console.log("Value: " + value + " Mode: " + mode);
       })
 })
+```
+
+#### Discrete Slider - Usage
+Discrete sliders display a numeric value label upon pressing the thumb, allowing users to input an exact value. Discrete sliders only allow predefined sets of options or values to be selected. These sliders are often used in scenarios where there are pre-defined values are available like choosing shoe size or any clothing size, etc.
+
+##### OutSet
+
+```js
+//Creating object of the SliderModel class with Slider type as Discrete 
+private sliderModel: SliderModel = new SliderModel(SliderType.Discrete)
+
+//Customization of the SliderModel object and mentioning the SliderStyle as OutSet
+aboutToAppear(){
+    this.sliderModel.setSliderStyle(SliderStyle.OutSet)
+    this.sliderModel.setMin(1000)
+    this.sliderModel.setMax(10000)
+    this.sliderModel.setStep(1000)
+    this.sliderModel.setCurrentValue(3000)
+    this.sliderModel.setShowSteps(true)
+    this.sliderModel.setShowTips(true)
+    this.sliderModel.setTrackThickness(8)
+    this.sliderModel.setReverse(false)
+    this.sliderModel.setDirection(Axis.Horizontal)
+    this.sliderModel.setShowValue(true)
+    this.sliderModel.setShowMin(false)
+    this.sliderModel.setShowMax(false)
+    this.sliderModel.setBlockColor("#ff0477ff")
+    this.sliderModel.setTrackColor("#D0D0D0")
+    this.sliderModel.setSelectedColor("#ff0477ff")
+}    
+
+//Passing SliderModel object to MaterialSlider and defining the Event onSliderChange
+MaterialSlider({
+      obj: this.sliderModel1,
+      onSliderChange:((value: number, mode: SliderChangeMode) => {
+           console.log("Value: " + value + " Mode: " + mode);
+      })
+})
+```
+
+##### InSet
+
+```js
+//Creating object of the SliderModel class with Slider type as Discrete 
+private sliderModel: SliderModel = new SliderModel(SliderType.Discrete)
+
+//Customization of the SliderModel object and mentioning the SliderStyle as InSet
+aboutToAppear(){
+    this.sliderModel.setSliderStyle(SliderStyle.InSet)
+    this.sliderModel.setMin(0)
+    this.sliderModel.setMax(100)
+    this.sliderModel.setStep(10)
+    this.sliderModel.setCurrentValue(50)
+    this.sliderModel.setShowSteps(true)
+    this.sliderModel.setShowTips(true)
+    this.sliderModel.setTrackThickness(15)
+    this.sliderModel.setReverse(false)
+    this.sliderModel.setDirection(Axis.Horizontal)
+    this.sliderModel.setShowValue(true)
+    this.sliderModel.setShowMin(true)
+    this.sliderModel.setShowMax(true)
+    this.sliderModel.setBlockColor(Color.White)
+    this.sliderModel.setTrackColor("#D0D0D0")
+    this.sliderModel.setSelectedColor("#ff0477ff")
+}    
+
+//Passing SliderModel object to MaterialSlider and defining the Event onSliderChange
+MaterialSlider({
+      obj: this.sliderModel1,
+      onSliderChange:((value: number, mode: SliderChangeMode) => {
+           console.log("Value: " + value + " Mode: " + mode);
+      })
+})           
 ```
