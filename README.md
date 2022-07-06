@@ -80,6 +80,8 @@ MaterialSlider({
 })
 ```
 
+![ContinuousOutset](https://user-images.githubusercontent.com/107906555/177507023-7415aa49-1236-4663-b893-fc96d76d5664.jpg)
+
 ##### InSet
 
 ```js
@@ -114,6 +116,7 @@ MaterialSlider({
       })
 })
 ```
+![ContinuousInset](https://user-images.githubusercontent.com/107906555/177507103-2f7b4bbb-84a6-41ee-ad4d-f36e6f0d2362.jpg)
 
 #### Discrete Slider - Usage
 Discrete sliders display a numeric value label upon pressing the thumb, allowing users to input an exact value. Discrete sliders only allow predefined sets of options or values to be selected. These sliders are often used in scenarios where there are pre-defined values are available like choosing shoe size or any clothing size, etc.
@@ -152,6 +155,7 @@ MaterialSlider({
       })
 })
 ```
+![DiscreteOutset](https://user-images.githubusercontent.com/107906555/177507151-c2e55b30-3e3a-48fc-92b7-20f9cb4be7a8.jpg)
 
 ##### InSet
 
@@ -187,3 +191,4 @@ MaterialSlider({
       })
 })           
 ```
+![DiscreteInset](https://user-images.githubusercontent.com/107906555/177507177-f524121a-2845-4914-85c8-6176fe8e4483.jpg)
