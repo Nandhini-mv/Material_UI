@@ -46,13 +46,11 @@ Access slider attributes through a object of SliderModel and customize the slide
 
 ##### Outset
 
-```ets
-//Creating object of the SliderModel class with Slider type a Continue
+```js
+//Creating object of the SliderModel class with Slider type as Continue
 private sliderModel: SliderModel = new SliderModel(SliderType.Continue)
-```
 
-```ets
-//Customization of the SliderModel object and mentioning the SliderStyle as Outset
+//Customization of the SliderModel object and mentioning the SliderStyle as OutSet
 aboutToAppear(){
     this.sliderModel.setSliderStyle(SliderStyle.OutSet)
     this.sliderModel.setMin(100)
@@ -71,9 +69,42 @@ aboutToAppear(){
     this.sliderModel.setTrackColor("#D0D0D0")
     this.sliderModel.setSelectedColor("#ff0477ff")
 }    
+
+//Passing SliderModel object to MaterialSlider and defining the Event onSliderChange
+MaterialSlider({
+      obj: this.sliderModel1,
+      onSliderChange:((value: number, mode: SliderChangeMode) => {
+           console.log("Value: " + value + " Mode: " + mode);
+      })
+})
 ```
 
-```ets
+##### Inset
+
+```js
+//Creating object of the SliderModel class with Slider type as Continue 
+private sliderModel: SliderModel = new SliderModel(SliderType.Continue)
+
+//Customization of the SliderModel object and mentioning the SliderStyle as InSet
+aboutToAppear(){
+    this.sliderModel.setSliderSliderStyle(SliderStyle.InSet)
+    this.sliderModel.setMin(0)
+    this.sliderModel.setMax(100)
+    this.sliderModel.setStep(1)
+    this.sliderModel.setCurrentValue(40)
+    this.sliderModel.setShowSteps(false)
+    this.sliderModel.setShowTips(true)
+    this.sliderModel.setTrackThickness(15)
+    this.sliderModel.setReverse(false)
+    this.sliderModel.setDirection(Axis.Horizontal)
+    this.sliderModel.setShowValue(true)
+    this.sliderModel.setShowMin(false)
+    this.sliderModel.setShowMax(false)
+    this.sliderModel.setBlockColor(Color.White)
+    this.sliderModel.setTrackColor("#D0D0D0")
+    this.sliderModel.setSelectedColor("#ff0477ff")
+}    
+
 //Passing SliderModel object to MaterialSlider and defining the Event onSliderChange
 MaterialSlider({
       obj: this.sliderModel1,
