@@ -13,3 +13,12 @@ import { MaterialSlider, SliderModel, SliderType } from '@ohos/materialslider'
 
 ##### Usage
 Access slider attributes through a object of SliderModel and customize the slider(if needed) using setter functions and finally pass the object to MaterialSlider.
+
+ Below are list of properties available.
+ | Properties   | Description | Type |
+ | -------------| ------------| -----|
+ | SliderType     |   Defined the type of the Slider         | SliderType Enum (Continue, Discrete)
+ | SliderStyle |    Defines the style of the Slider       | SliderStyle Enum (InSet, OutSet)
+ | min, max|    Defines the minimum and maximun values of the Slider       |  number           |
+ |  step         |   Step of the slider              |   number    |
+ | showSteps  |  Whether to display the current step    |   boolean    |
