@@ -26,8 +26,8 @@ Access slider attributes through a object of SliderModel and customize the slide
  |  step         |   Step of the slider              |   number    |
  | showSteps  |  Whether to display the current step    |   boolean (Default: false)   |
  | showTips   |  Displays the bubble to indicate the percentage while sliding   | boolean (Default: false)  |
- | showMin, showMax | Displays the minimum and maximum values on the screen  | boolean   |
- |  showValue  | Displays the value of the Slider on the screen  |  boolean  |
+ | showMin, showMax | Displays the minimum and maximum values on the screen  | boolean (Default: false)  |
+ |  showValue  | Displays the value of the Slider on the screen  |  boolean (Default: false)  |
  | trackThickness  |  Defines the thickness of the track  |  number   |
  |  reverse   | Whether to display the slider values in reverse  |  boolean (Default: false)  |
  |  direction  |  Defines the direction of the slider (Horizontally or Vertically)  | Axis Enum (Horizontal, Vertical)   |
@@ -123,7 +123,7 @@ MaterialSlider({
 ![ContinuousInset](https://user-images.githubusercontent.com/107906555/177507103-2f7b4bbb-84a6-41ee-ad4d-f36e6f0d2362.jpg)
 
 #### Discrete Slider - Usage
-Discrete sliders display a numeric value label upon pressing the thumb, allowing users to input an exact value. Discrete sliders only allow predefined sets of options or values to be selected. These sliders are often used in scenarios where there are pre-defined values available like choosing shoe size or any clothing size, etc. A Pictorial representation of the Continuous Slider with its design parameters is shown below.
+Discrete sliders display a numeric value label upon pressing the thumb, allowing users to input an exact value. Discrete sliders only allow predefined sets of options or values to be selected. These sliders are often used in scenarios where there are pre-defined values available like choosing shoe size or any clothing size, etc. A Pictorial representation of the Discrete Slider with its design parameters is shown below.
 
 <img width="446" alt="2_Discrete_slider_measurements" src="https://user-images.githubusercontent.com/107906555/177693881-7aaa178c-4da7-4504-b32f-23a2a9191bec.PNG">
 
