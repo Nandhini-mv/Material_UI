@@ -38,12 +38,16 @@ Access slider attributes through a object of SliderModel and customize the slide
  |           |             |              |
  
  Below are the events that are supported by Slider
- | Properties   | Description |
+ | Name   | Description |
  | -------------| ------------|
  | onSliderChange(callback: (value: number, mode: SliderChangeMode) => void)   |  Callback is invoked when the slider slides  <br /> **value** - Current Value of the Slider <br /> **mode** - Dragging state or Mode of the Slider (SliderChangeMode Enum - Begin, Moving, End)    |
  
 #### Continuous Slider - Usage
-Continuous sliders allow users to make selections that don’t require a specific value. These sliders are often used to adjust brightness or volume.
+Continuous sliders allow users to make selections that don’t require a specific value. These sliders are often used to adjust brightness or volume. A Pictorial representation of the Continuous Slider with its design parameters is shown below.
+
+<img width="499" alt="1_Continuous_slider_measurements" src="https://user-images.githubusercontent.com/107906555/177693805-b6afbc1c-2367-4921-b110-69999d12b358.PNG">
+
+The image shows the measurement of the Continuous Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part).
 
 ##### OutSet
 
@@ -60,7 +64,7 @@ aboutToAppear(){
     this.sliderModel.setCurrentValue(500)
     this.sliderModel.setShowSteps(false)
     this.sliderModel.setShowTips(true)
-    this.sliderModel.setTrackThickness(8)
+    this.sliderModel.setTrackThickness(6)
     this.sliderModel.setReverse(false)
     this.sliderModel.setDirection(Axis.Horizontal)
     this.sliderModel.setShowValue(true)
@@ -97,7 +101,7 @@ aboutToAppear(){
     this.sliderModel.setCurrentValue(40)
     this.sliderModel.setShowSteps(false)
     this.sliderModel.setShowTips(true)
-    this.sliderModel.setTrackThickness(15)
+    this.sliderModel.setTrackThickness(6)
     this.sliderModel.setReverse(false)
     this.sliderModel.setDirection(Axis.Horizontal)
     this.sliderModel.setShowValue(true)
@@ -119,7 +123,11 @@ MaterialSlider({
 ![ContinuousInset](https://user-images.githubusercontent.com/107906555/177507103-2f7b4bbb-84a6-41ee-ad4d-f36e6f0d2362.jpg)
 
 #### Discrete Slider - Usage
-Discrete sliders display a numeric value label upon pressing the thumb, allowing users to input an exact value. Discrete sliders only allow predefined sets of options or values to be selected. These sliders are often used in scenarios where there are pre-defined values are available like choosing shoe size or any clothing size, etc.
+Discrete sliders display a numeric value label upon pressing the thumb, allowing users to input an exact value. Discrete sliders only allow predefined sets of options or values to be selected. These sliders are often used in scenarios where there are pre-defined values available like choosing shoe size or any clothing size, etc. A Pictorial representation of the Continuous Slider with its design parameters is shown below.
+
+<img width="446" alt="2_Discrete_slider_measurements" src="https://user-images.githubusercontent.com/107906555/177693881-7aaa178c-4da7-4504-b32f-23a2a9191bec.PNG">
+
+The image shows the measurement of the Discrete Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part).
 
 ##### OutSet
 
@@ -136,7 +144,7 @@ aboutToAppear(){
     this.sliderModel.setCurrentValue(3000)
     this.sliderModel.setShowSteps(true)
     this.sliderModel.setShowTips(true)
-    this.sliderModel.setTrackThickness(8)
+    this.sliderModel.setTrackThickness(6)
     this.sliderModel.setReverse(false)
     this.sliderModel.setDirection(Axis.Horizontal)
     this.sliderModel.setShowValue(true)
@@ -172,7 +180,7 @@ aboutToAppear(){
     this.sliderModel.setCurrentValue(50)
     this.sliderModel.setShowSteps(true)
     this.sliderModel.setShowTips(true)
-    this.sliderModel.setTrackThickness(15)
+    this.sliderModel.setTrackThickness(6)
     this.sliderModel.setReverse(false)
     this.sliderModel.setDirection(Axis.Horizontal)
     this.sliderModel.setShowValue(true)
