@@ -246,7 +246,7 @@ Access Snackbar attributes through a object of SnackBarModel and customize the S
 
 //Customization of the model object with appropriate values
 aboutToAppear(){
-    this.snackBarModel1.setSnackBarText("Text associated with SimpleSnack")    //Mandatory
+    this.snackBarModel1.setSnackBarText("Text associated with SimpleSnack") 
     this.snackBarModel1.setSnackTextColor("#ffffff")
     this.snackBarModel1.setSnackBackColor("#9400D3")
     this.snackBarModel1.setOpacity(1)
@@ -279,12 +279,12 @@ This is a Snackbar with a one line message and a action associated with it. The 
 
 //Customization of the model object with appropriate values
 aboutToAppear(){
-    this.snackBarModel2.setSnackBarText("Text of OneLineActionSnack")       //Mandatory
+    this.snackBarModel2.setSnackBarText("Text of OneLineActionSnack")
     this.snackBarModel2.setSnackTextColor("#ffffff")
     this.snackBarModel2.setSnackBackColor("#9400D3")
     this.snackBarModel2.setOpacity(1)
     this.snackBarModel2.setTimer(4000)
-    this.snackBarModel2.setButtonText("ACTION")                              //Mandatory
+    this.snackBarModel2.setButtonText("ACTION")        
     this.snackBarModel2.setButtonTextColor("#ECD540")
 }
 //Passing SnackBarModel object to MaterialSnackBar component
@@ -296,5 +296,73 @@ MaterialSnackBar({
 
 ![OneLineActionSnack](https://user-images.githubusercontent.com/107906555/177968467-3baa3ddc-cd79-42aa-a446-8236f3eda64e.png)
 
-##### Two Line Action Snack
-This is is a Snackbar with two line message and an action associated with it.
+##### Two Line Action Snackbar
+This is a Snackbar with two line message and an action associated with it. The Picture describing the design parameters are shown below.
+
+<img width="620" alt="3_Two line Text Snackbar_measurements" src="https://user-images.githubusercontent.com/107906555/177990529-d73eae20-5a41-4ac6-8583-99b58f8f1f89.PNG">
+
+###### Usage
+
+```js
+//Creating SnackBarModel object with the SnackBarType as TwoLineActionSnack
+@State snackBarModel3: SnackBarModel = new SnackBarModel(SnackBarType.TwoLineActionSnack)
+
+//Defining the Action for the Snackbar Button
+  SnackButtonAction: () => void = function () {
+    console.log("test")
+  }
+
+//Customization of the model object with appropriate values
+aboutToAppear(){
+    this.snackBarModel3.setSnackBarText("Longer text associated with TwoLineActionSnack") 
+    this.snackBarModel3.setSnackTextColor("#ffffff")
+    this.snackBarModel3.setSnackBackColor("#9400D3")
+    this.snackBarModel3.setOpacity(1)
+    this.snackBarModel3.setTimer(4000)
+    this.snackBarModel3.setButtonText("ACTION")                                           
+    this.snackBarModel3.setButtonTextColor("#ECD540")
+}
+
+//Passing SnackBarModel object to MaterialSnackBar component
+MaterialSnackBar({
+    obj : this.snackBarModel3,
+    func : this.SnackButtonAction
+})
+```
+![TwoLineActionSnack](https://user-images.githubusercontent.com/107906555/177991342-4fd7c8e2-c95b-484c-a206-d66dcdde719f.png)
+
+##### Big Line Action Snackbar
+This is a Snackbar with two line text and a longer action text. The Picture describing the design parameters are shown below.
+
+<img width="616" alt="4_Two line Text Snackbar_Action_measurements" src="https://user-images.githubusercontent.com/107906555/177991701-c8bdd372-4015-4fbd-9857-6792cea92b8c.PNG">
+
+###### Usage
+
+```js
+//Creating SnackBarModel object with the SnackBarType as BigTwoLineActionSnack
+@State snackBarModel4: SnackBarModel = new SnackBarModel(SnackBarType.BigTwoLineActionSnack)
+
+//Defining the Action for the Snackbar Button
+  SnackButtonAction: () => void = function () {
+    console.log("test")
+  }
+
+//Customization of the model object with appropriate values
+aboutToAppear(){
+    this.snackBarModel4.setSnackBarText("Longer text associated with   BigTwoLineActionSnack") 
+    this.snackBarModel4.setSnackTextColor("#ffffff")
+    this.snackBarModel4.setSnackBackColor("#9400D3")
+    this.snackBarModel4.setOpacity(1)
+    this.snackBarModel4.setTimer(4000)
+    this.snackBarModel4.setButtonText("LONGER ACTION")                                         
+    this.snackBarModel4.setButtonTextColor("#ECD540")
+}
+
+///Passing SnackBarModel object to MaterialSnackBar component
+MaterialSnackBar({
+          obj : this.snackBarModel4,
+          func : this.SnackButtonAction
+        })
+```  
+
+![BigTwoLineActionSnack](https://user-images.githubusercontent.com/107906555/177992100-5301e50c-16ce-4498-a97e-0aa3934dc578.png)
