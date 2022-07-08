@@ -223,4 +223,71 @@ Access Snackbar attributes through a object of SnackBarModel and customize the S
  | snackBarType  | Defines the type of the Snackbar | SnackBarType Enum (SimpleSnack, OneLineActionSnack, TwoLineActionSnack, BigTwoLineActionSnack)  |
  | snacBarText  |  Text associated with the Snackbar  | String  |
  | buttonText  |  Defines the text of the Snackbar button  | String |
+ | show   |  Defines the visibility of the Snackbar  |  Visibility Enum (Visible, None) |
+ | timer | Defines the number of seconds the Snackbar will be visible | number |
+ | snackBackColor  |  Background Color of the Snackbar  |  ResourceColor  |
+ | snackTextColor  |  Defines the color of the Snackbar text  | ResourceColor  |
+ | buttonTextColor  | Defines the color of the button text | ResourceColor  |
+ | opacity  | Defines the opacity of the Snackbar  |  number (values range from 0-1) |
+ |          |               |             |
  
+ #### List of Snackbars
+ 
+ ##### Simple Snack
+ This is a Simple snackbar with just a message. There is no action associated with this type. The Picture describing the design parameters are shown below.
+ 
+ <img width="593" alt="1_Text Snackbar_measurements" src="https://user-images.githubusercontent.com/107906555/177966156-fe97cc87-33a4-4eb9-bbc2-d57c2f623b1f.PNG">
+
+###### Usage
+
+```js
+//Creating SnackBarModel object with the SnackBarType as SimpleSnack
+@State snackBarModel1: SnackBarModel = new SnackBarModel(SnackBarType.SimpleSnack)
+
+//Customization of the model object with appropriate values
+aboutToAppear(){
+    this.snackBarModel1.setSnackBarText("Text associated with SimpleSnack")    //Mandatory
+    this.snackBarModel1.setSnackTextColor("#ffffff")
+    this.snackBarModel1.setSnackBackColor("#9400D3")
+    this.snackBarModel1.setOpacity(1)
+    this.snackBarModel1.setTimer(4000)
+}
+
+//Passing SnackBarModel object to MaterialSnackBar component
+MaterialSnackBar({
+    obj : this.snackBarModel1
+})
+```
+ 
+##### One Line Action Snackbar
+This is a Snackbar with a one line message and a action associated with it. The Picture describing the design parameters are shown below.
+
+<img width="612" alt="2_Text Snackbar_Action_measurements" src="https://user-images.githubusercontent.com/107906555/177967519-b4f4681d-7b51-4f72-a464-51a6846c83ac.PNG">
+
+##### Usage
+
+```js
+//Creating SnackBarModel object with the SnackBarType as OneLineActionSnack
+@State snackBarModel2: SnackBarModel = new SnackBarModel(SnackBarType.OneLineActionSnack)
+
+//Defining the Action for the Snackbar Button
+  SnackButtonAction: () => void = function () {
+    console.log("test")
+  }
+
+//Customization of the model object with appropriate values
+aboutToAppear(){
+    this.snackBarModel2.setSnackBarText("Text of OneLineActionSnack")       //Mandatory
+    this.snackBarModel2.setSnackTextColor("#ffffff")
+    this.snackBarModel2.setSnackBackColor("#9400D3")
+    this.snackBarModel2.setOpacity(1)
+    this.snackBarModel2.setTimer(4000)
+    this.snackBarModel2.setButtonText("ACTION")                              //Mandatory
+    this.snackBarModel2.setButtonTextColor("#ECD540")
+}
+//Passing SnackBarModel object to MaterialSnackBar component
+MaterialSnackBar({
+   obj : this.snackBarModel2,
+   func : this.SnackButtonAction
+})
+```
