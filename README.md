@@ -258,6 +258,8 @@ MaterialSnackBar({
     obj : this.snackBarModel1
 })
 ```
+
+![SimpleSnack](https://user-images.githubusercontent.com/107906555/177968379-34ed90a3-cf41-4632-b278-339a397d3890.png)
  
 ##### One Line Action Snackbar
 This is a Snackbar with a one line message and a action associated with it. The Picture describing the design parameters are shown below.
@@ -291,3 +293,8 @@ MaterialSnackBar({
    func : this.SnackButtonAction
 })
 ```
+
+![OneLineActionSnack](https://user-images.githubusercontent.com/107906555/177968467-3baa3ddc-cd79-42aa-a446-8236f3eda64e.png)
+
+##### Two Line Action Snack
+This is is a Snackbar with two line message and an action associated with it.
