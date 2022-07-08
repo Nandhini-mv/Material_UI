@@ -2,7 +2,7 @@
 
 ## List of Material UI Components
 
-### Sliders
+## Sliders
 
 Sliders allow users to make selections from a range of values. We can adjust volume, brightness or use it for selection in e-commerce application. Lets see how to create Slider.
 
@@ -202,7 +202,7 @@ MaterialSlider({
 ```
 ![DiscreteInset](https://user-images.githubusercontent.com/107906555/177507177-f524121a-2845-4914-85c8-6176fe8e4483.jpg)
 
-### Snackbar
+## Snackbar
 Snackbars provide brief messages about app processes at the bottom of the screen. Snackbar informs the user that the application has performed or will be performing certain task. They appear at the bottom of the screen for a brief time. They do not interfere in user experience and do not wait for user input to disappear. A Snackbar can contain a single action that is optional.
 
 ![MaterialSnackbar](https://user-images.githubusercontent.com/107906555/177764745-3cc6fa15-d33e-46ea-8ec1-a5629ea37234.gif)
@@ -233,7 +233,7 @@ Access Snackbar attributes through a object of SnackBarModel and customize the S
  
  #### List of Snackbars
  
- ##### Simple Snack
+ #### Simple Snack
  This is a Simple snackbar with just a message. There is no action associated with this type. The Picture describing the design parameters are shown below.
  
  <img width="593" alt="1_Text Snackbar_measurements" src="https://user-images.githubusercontent.com/107906555/177966156-fe97cc87-33a4-4eb9-bbc2-d57c2f623b1f.PNG">
@@ -261,7 +261,7 @@ MaterialSnackBar({
 
 ![SimpleSnack](https://user-images.githubusercontent.com/107906555/177968379-34ed90a3-cf41-4632-b278-339a397d3890.png)
  
-##### One Line Action Snackbar
+#### One Line Action Snackbar
 This is a Snackbar with a one line message and a action associated with it. The Picture describing the design parameters are shown below.
 
 <img width="612" alt="2_Text Snackbar_Action_measurements" src="https://user-images.githubusercontent.com/107906555/177967519-b4f4681d-7b51-4f72-a464-51a6846c83ac.PNG">
@@ -296,7 +296,7 @@ MaterialSnackBar({
 
 ![OneLineActionSnack](https://user-images.githubusercontent.com/107906555/177968467-3baa3ddc-cd79-42aa-a446-8236f3eda64e.png)
 
-##### Two Line Action Snackbar
+#### Two Line Action Snackbar
 This is a Snackbar with two line message and an action associated with it. The Picture describing the design parameters are shown below.
 
 <img width="620" alt="3_Two line Text Snackbar_measurements" src="https://user-images.githubusercontent.com/107906555/177990529-d73eae20-5a41-4ac6-8583-99b58f8f1f89.PNG">
@@ -331,7 +331,7 @@ MaterialSnackBar({
 ```
 ![TwoLineActionSnack](https://user-images.githubusercontent.com/107906555/177991342-4fd7c8e2-c95b-484c-a206-d66dcdde719f.png)
 
-##### Big Line Action Snackbar
+#### Big Line Action Snackbar
 This is a Snackbar with two line text and a longer action text. The Picture describing the design parameters are shown below.
 
 <img width="616" alt="4_Two line Text Snackbar_Action_measurements" src="https://user-images.githubusercontent.com/107906555/177991701-c8bdd372-4015-4fbd-9857-6792cea92b8c.PNG">
