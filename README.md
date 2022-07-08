@@ -8,6 +8,7 @@ Sliders allow users to make selections from a range of values. We can adjust vol
 
 ![MaterialSlider](https://user-images.githubusercontent.com/107906555/177477579-f558e7ee-9740-44a2-8788-aa4742e75f86.gif)
 
+The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialSliders)
 
 #### Import
 ```js
@@ -15,7 +16,7 @@ import { MaterialSlider, SliderModel, SliderType } from '@ohos/materialslider'
 ```
 
 #### Usage
-Access slider attributes through a object of SliderModel and customize the slider(if needed) using setter functions and finally pass the object to MaterialSlider.
+Access slider attributes through a object of SliderModel and customize the Slider using setter functions and finally pass the object to MaterialSlider.
 
  Below are list of properties available.
  | Properties   | Description | Type |
@@ -200,3 +201,26 @@ MaterialSlider({
 })           
 ```
 ![DiscreteInset](https://user-images.githubusercontent.com/107906555/177507177-f524121a-2845-4914-85c8-6176fe8e4483.jpg)
+
+### Snackbar
+Snackbars provide brief messages about app processes at the bottom of the screen. Snackbar informs the user that the application has performed or will be performing certain task. They appear at the bottom of the screen for a brief time. They do not interfere in user experience and do not wait for user input to disappear. A Snackbar can contain a single action that is optional.
+
+![MaterialSnackbar](https://user-images.githubusercontent.com/107906555/177764745-3cc6fa15-d33e-46ea-8ec1-a5629ea37234.gif)
+
+The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialSnackbar)
+
+#### Import
+```js
+import { MaterialSnackBar, SnackBarModel, SnackBarType }  from "@ohos/materialsnackbar"
+```
+
+#### Usage
+Access Snackbar attributes through a object of SnackBarModel and customize the Snackbar using setter functionS and finally pass the object to MaterialSnackBar and action associated with optional action button.
+
+ Below are list of properties available.
+ | Properties   | Description | Type |
+ | -------------| ------------| -----|
+ | snackBarType  | Defines the type of the Snackbar | SnackBarType Enum (SimpleSnack, OneLineActionSnack, TwoLineActionSnack, BigTwoLineActionSnack)  |
+ | snacBarText  |  Text associated with the Snackbar  | String  |
+ | buttonText  |  Defines the text of the Snackbar button  | String |
+ 
