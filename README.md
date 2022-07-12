@@ -209,12 +209,12 @@ Snackbars provide brief messages about app processes at the bottom of the screen
 
 The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialSnackbar)
 
-#### Import
+### Import
 ```js
 import { MaterialSnackBar, SnackBarModel, SnackBarType }  from "@ohos/materialsnackbar"
 ```
 
-#### Usage
+### Usage
 Access Snackbar attributes through a object of SnackBarModel and customize the Snackbar using setter functionS and finally pass the object to MaterialSnackBar and action associated with optional action button.
 
  Below are list of properties available.
@@ -231,14 +231,14 @@ Access Snackbar attributes through a object of SnackBarModel and customize the S
  | opacity  | Defines the opacity of the Snackbar  |  number (values range from 0-1) |
  |          |               |             |
  
- #### List of Snackbars
+ ### List of Snackbars
  
  #### Simple Snack
  This is a Simple snackbar with just a message. There is no action associated with this type. The Picture describing the design parameters are shown below.
  
  <img width="593" alt="1_Text Snackbar_measurements" src="https://user-images.githubusercontent.com/107906555/177966156-fe97cc87-33a4-4eb9-bbc2-d57c2f623b1f.PNG">
 
-###### Usage
+##### Usage
 
 ```js
 //Creating SnackBarModel object with the SnackBarType as SimpleSnack
@@ -301,7 +301,7 @@ This is a Snackbar with two line message and an action associated with it. The P
 
 <img width="620" alt="3_Two line Text Snackbar_measurements" src="https://user-images.githubusercontent.com/107906555/177990529-d73eae20-5a41-4ac6-8583-99b58f8f1f89.PNG">
 
-###### Usage
+##### Usage
 
 ```js
 //Creating SnackBarModel object with the SnackBarType as TwoLineActionSnack
@@ -336,7 +336,7 @@ This is a Snackbar with two line text and a longer action text. The Picture desc
 
 <img width="616" alt="4_Two line Text Snackbar_Action_measurements" src="https://user-images.githubusercontent.com/107906555/177991701-c8bdd372-4015-4fbd-9857-6792cea92b8c.PNG">
 
-###### Usage
+##### Usage
 
 ```js
 //Creating SnackBarModel object with the SnackBarType as BigTwoLineActionSnack
@@ -366,3 +366,70 @@ MaterialSnackBar({
 ```  
 
 ![BigTwoLineActionSnack](https://user-images.githubusercontent.com/107906555/177992100-5301e50c-16ce-4498-a97e-0aa3934dc578.png)
+
+## Banners
+Banners display important message and provides user action to address or dismiss the banner. Banners are displayed at the top of the screen below the app bar. They are persistent, allowing the user to ignore them or interact with them when needed. Only one banner should be displayed at a time.
+
+![MaterialBanner](https://user-images.githubusercontent.com/107906555/178459041-e9718862-8804-4aea-b073-8d6712a8e8de.gif)
+
+The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialBanners)
+
+### Import
+```js
+import {MaterialBanner,BannerType,BannerModel} from '@ohos/material-banner'
+```
+
+### Usage
+Access banner attributes using an object of BannerModel and customize the banner using setter functions and finally pass the object to MaterialBanner.
+
+Below are the list of properties available for MaterialBanner.
+| Properties   | Description | Type |
+| -------------| ------------| -----|
+| bannerType  |  Defines the type of the banner  |  BannerType Enum (OneButton, TwoButton, ImageButton)  |
+|  bannerMessage  | Specifies the message of the banner  |  string |
+|  buttonText1  |  Text associated with 1st button of the Banner  |  string  |
+|  buttonText2  |  Text associated with 2nd button of the Banner  |  string  |
+|  buttonColor  |  Color of the Banner Button   |  string or ResourceColor  |
+|  textSize  | Size of the Banner text  |  string  |
+|  textStyle  | Style of the Banner text  | string  |
+| image  |  Specifies the url of the image  | Resource  |
+| show  |  Defines the Visibility of the Banner  | Visibility  |
+|     |      |     |
+
+### List of Banners
+
+#### One Button Banner
+This type of Banner has a message and one button associated with it. The picture describing the design parameters are shown below.
+
+<img width="432" alt="1_Banner_one-line_measurements" src="https://user-images.githubusercontent.com/107906555/178465214-31745e76-bf9b-4082-af36-87659cdb9b6f.PNG">
+
+##### Usage
+
+```js
+//Creating object of BannerModel with BannerType as OneButton
+private bannerModel1:BannerModel=new BannerModel(BannerType.OneButton)
+
+//Setting the model object parameters with appropriate values
+aboutToAppear(){  
+  this.bannerModel1.setBannerMessage("Message Text");  
+  this.bannerModel1.setButtonText1("ACTION")  
+  this.bannerModel1.setButtonColor("#317AFF")  
+  this.bannerModel1.setTextSize('20fp')  
+  this.bannerModel1.setTextStyle('calibri')
+}
+
+//Passing BannerModel object to MaterialBanner component
+MaterialBanner({  
+  bModel: this.bannerModel1,  
+  buttonAction1: this.BannerFunc  
+})
+```
+
+![OneButton](https://user-images.githubusercontent.com/107906555/178469398-0d4b9e24-0bd6-4e8a-a86a-d258e02ec124.jpg)
+
+#### Two Button Banner
+This type of Banner has a message and two buttons associated with it. The picture describing the design parameters are shown below.
+
+<img width="424" alt="2_Banner_Two-line_measurements" src="https://user-images.githubusercontent.com/107906555/178469557-2b1a7713-5c5b-4adc-b8b4-7cccd41650fe.PNG">
+
+##### Usage
