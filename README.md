@@ -10,12 +10,22 @@ Sliders allow users to make selections from a range of values. We can adjust vol
 
 The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialSliders)
 
-#### Import
+### Download and Install
+
+To use MaterialSlider component for OpenHarmony, please use the below instruction
+
+```js
+npm i @ohos/MaterialSlider
+```
+
+Details about OpenHarmony NPM environment configuration, click [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
+
+### Import
 ```js
 import { MaterialSlider, SliderModel, SliderType } from '@ohos/materialslider'
 ```
 
-#### Usage
+### Usage
 Access slider attributes through a object of SliderModel and customize the Slider using setter functions and finally pass the object to MaterialSlider.
 
  Below are list of properties available.
@@ -43,14 +53,14 @@ Access slider attributes through a object of SliderModel and customize the Slide
  | -------------| ------------|
  | onSliderChange(callback: (value: number, mode: SliderChangeMode) => void)   |  Callback is invoked when the slider slides  <br /> **value** - Current Value of the Slider <br /> **mode** - Dragging state or Mode of the Slider (SliderChangeMode Enum - Begin, Moving, End)    |
  
-#### Continuous Slider - Usage
+### Continuous Slider
 Continuous sliders allow users to make selections that don’t require a specific value. These sliders are often used to adjust brightness or volume. A Pictorial representation of the Continuous Slider with its design parameters is shown below.
 
 <img width="499" alt="1_Continuous_slider_measurements" src="https://user-images.githubusercontent.com/107906555/177693805-b6afbc1c-2367-4921-b110-69999d12b358.PNG">
 
 The image shows the measurement of the Continuous Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part).
 
-##### OutSet
+#### OutSet - Usage
 
 ```js
 //Creating object of the SliderModel class with Slider type as Continue
@@ -87,7 +97,7 @@ MaterialSlider({
 
 ![ContinuousOutset](https://user-images.githubusercontent.com/107906555/177507023-7415aa49-1236-4663-b893-fc96d76d5664.jpg)
 
-##### InSet
+#### InSet - Usage
 
 ```js
 //Creating object of the SliderModel class with Slider type as Continue 
@@ -123,14 +133,14 @@ MaterialSlider({
 ```
 ![ContinuousInset](https://user-images.githubusercontent.com/107906555/177507103-2f7b4bbb-84a6-41ee-ad4d-f36e6f0d2362.jpg)
 
-#### Discrete Slider - Usage
+### Discrete Slider
 Discrete sliders display a numeric value label upon pressing the thumb, allowing users to input an exact value. Discrete sliders only allow predefined sets of options or values to be selected. These sliders are often used in scenarios where there are pre-defined values available like choosing shoe size or any clothing size, etc. A Pictorial representation of the Discrete Slider with its design parameters is shown below.
 
 <img width="446" alt="2_Discrete_slider_measurements" src="https://user-images.githubusercontent.com/107906555/177693881-7aaa178c-4da7-4504-b32f-23a2a9191bec.PNG">
 
 The image shows the measurement of the Discrete Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part).
 
-##### OutSet
+#### OutSet - Usage
 
 ```js
 //Creating object of the SliderModel class with Slider type as Discrete 
@@ -166,7 +176,7 @@ MaterialSlider({
 ```
 ![DiscreteOutset](https://user-images.githubusercontent.com/107906555/177507151-c2e55b30-3e3a-48fc-92b7-20f9cb4be7a8.jpg)
 
-##### InSet
+#### InSet - Usage
 
 ```js
 //Creating object of the SliderModel class with Slider type as Discrete 
@@ -208,6 +218,16 @@ Snackbars provide brief messages about app processes at the bottom of the screen
 ![MaterialSnackbar](https://user-images.githubusercontent.com/107906555/177764745-3cc6fa15-d33e-46ea-8ec1-a5629ea37234.gif)
 
 The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialSnackbar)
+
+### Download and Install
+
+To use MaterialSnackbar component for OpenHarmony, please use the below instruction
+
+```js
+npm i @ohos/materialsnackbar
+```
+
+Details about OpenHarmony NPM environment configuration, click [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
 
 ### Import
 ```js
@@ -374,6 +394,16 @@ Banners display important message and provides user action to address or dismiss
 
 The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialBanners)
 
+### Download and Install
+
+To use MaterialBanner component for OpenHarmony, please use the below instruction
+
+```js
+npm i @ohos/material-banner
+```
+
+Details about OpenHarmony NPM environment configuration, click [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
+
 ### Import
 ```js
 import {MaterialBanner,BannerType,BannerModel} from '@ohos/material-banner'
@@ -409,6 +439,11 @@ This type of Banner has a message and one button associated with it. The picture
 //Creating object of BannerModel with BannerType as OneButton
 private bannerModel1:BannerModel=new BannerModel(BannerType.OneButton)
 
+//Banner Button Function
+BannerFunc: () => void= function () {
+   console.log("WiFi turned On")
+}
+
 //Setting the model object parameters with appropriate values
 aboutToAppear(){  
   this.bannerModel1.setBannerMessage("Message Text");  
@@ -433,3 +468,33 @@ This type of Banner has a message and two buttons associated with it. The pictur
 <img width="424" alt="2_Banner_Two-line_measurements" src="https://user-images.githubusercontent.com/107906555/178469557-2b1a7713-5c5b-4adc-b8b4-7cccd41650fe.PNG">
 
 ##### Usage
+```js
+//Creating object of BannerModel with BannerType as TwoButton
+private bannerModel2:BannerModel=new BannerModel(BannerType.TwoButton)
+
+//Setting Banner Button Functions
+BannerFunc1: () => void= function () {
+   console.log("Logged in as Guest")
+}
+BannerFunc2: () => void= function () {
+   console.log("Sign in details")
+}
+  
+//Setting the model object parameters with appropriate values
+aboutToAppear(){  
+  this.bannerModel2.setBannerMessage("Message Text");  
+  this.bannerModel2.setButtonText1("ACTION1")  
+  this.bannerModel2.setButtonText2("ACTION2")  
+  this.bannerModel2.setButtonColor("#317AFF")  
+  this.bannerModel2.setTextSize('16fp')  
+  this.bannerModel2.setTextStyle('calibri')
+}
+
+//Passing BannerModel object to MaterialBanner component
+MaterialBanner({  
+  bModel: this.bannerModel2,  
+  buttonAction1: this.BannerFunc1,  
+  buttonAction2: this.BannerFunc2  
+})
+```
+
