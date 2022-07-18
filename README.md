@@ -4,11 +4,26 @@
 
 ## Sliders
 
-Sliders allow users to make selections from a range of values. We can adjust volume, brightness or use it for selection in e-commerce application. Lets see how to create Slider.
+**Material Sliders** allow users to make selections from a range of values. Sliders allow users to view and select a value (or range) from the range along a bar. They’re ideal for adjusting settings such as volume, brightness, for applying image filters or use it for selection in e-commerce application. Changes made with sliders are immediate, allowing the user to make slider adjustments while determining a selection. A Typical Material Slider looks as shown below.
 
-![MaterialSlider](https://user-images.githubusercontent.com/107906555/177477579-f558e7ee-9740-44a2-8788-aa4742e75f86.gif)
+![Slider_Intro](https://user-images.githubusercontent.com/107906555/178949661-78c2fdc1-b00a-4e6a-ac30-712461026997.jpg)
 
 The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialSliders)
+
+## Benefits
+
+* Changes in value is reflected immediately.
+* 4 variants are available.
+* Slider properties are customisable according to the requirement.
+
+## List of Features
+The features of Slider implemented are listed below.
+
+| Fetaure   | Display | Description |
+| -------------| ------------| -----|
+|  Reverse Slider  |![Feature1](https://user-images.githubusercontent.com/107906555/179450124-d3aa73c6-97b0-430e-9de6-a625777c99ef.jpg)  |  Slider can be moved in the reverse direction  |
+|  Horizontal/Vertical Slider  | ![Feature 2](https://user-images.githubusercontent.com/107906555/179450433-80e84510-2fdd-4fe5-847f-1e6e8465d2da.jpg)  |  Slider can be viewed in the vertical direction as well  |
+| Show Tips  |  ![Feature 3](https://user-images.githubusercontent.com/107906555/179450717-c4de0b8b-3ef7-49b4-9155-0d924ad7a1d2.jpg)  |  Tool Tip can be shown to display the percentage of the slider that has been slid  |
 
 ### Download and Install
 
@@ -28,7 +43,7 @@ import { MaterialSlider, SliderModel, SliderType } from '@ohos/materialslider'
 ### Usage
 Access slider attributes through a object of SliderModel and customize the Slider using setter functions and finally pass the object to MaterialSlider.
 
- Below are list of properties available.
+ Below are list of properties available which can be customized using the SliderModel object (setter methods).
  | Properties   | Description | Type |
  | -------------| ------------| -----|
  | SliderType     |   Defined the type of the Slider         | SliderType Enum (Continue, Discrete)  |
@@ -48,7 +63,7 @@ Access slider attributes through a object of SliderModel and customize the Slide
  |  selectedColor   |  Color of the Slider rail that has been slid |  ResourceColor  |
  |           |             |              |
  
- Below are the events that are supported by Slider
+ Below is the event that is supported by Material Slider
  | Name   | Description |
  | -------------| ------------|
  | onSliderChange(callback: (value: number, mode: SliderChangeMode) => void)   |  Callback is invoked when the slider slides  <br /> **value** - Current Value of the Slider <br /> **mode** - Dragging state or Mode of the Slider (SliderChangeMode Enum - Begin, Moving, End)    |
