@@ -25,7 +25,7 @@ The features of Slider implemented are listed below.
 |  Horizontal/Vertical Slider  | ![Feature 2](https://user-images.githubusercontent.com/107906555/179450433-80e84510-2fdd-4fe5-847f-1e6e8465d2da.jpg)  |  Slider can be viewed in the vertical direction as well  |
 | Show Tips  |  ![Feature 3](https://user-images.githubusercontent.com/107906555/179450717-c4de0b8b-3ef7-49b4-9155-0d924ad7a1d2.jpg)  |  Tool Tip can be shown to display the percentage of the slider that has been slid  |
 
-### Download and Install
+## Download and Install
 
 To use MaterialSlider component for OpenHarmony, please use the below instruction
 
@@ -35,13 +35,12 @@ npm i @ohos/MaterialSlider
 
 Details about OpenHarmony NPM environment configuration, click [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
 
-### Import
+## Usage Instructions
+Import the Slider Library. Then, access slider attributes through a object of SliderModel and customize the Slider using setter functions and finally pass the object to MaterialSlider.
+
 ```js
 import { MaterialSlider, SliderModel, SliderType } from '@ohos/materialslider'
 ```
-
-### Usage
-Access slider attributes through a object of SliderModel and customize the Slider using setter functions and finally pass the object to MaterialSlider.
 
  Below are list of properties available which can be customized using the SliderModel object (setter methods).
  | Properties   | Description | Type |
@@ -68,14 +67,17 @@ Access slider attributes through a object of SliderModel and customize the Slide
  | -------------| ------------|
  | onSliderChange(callback: (value: number, mode: SliderChangeMode) => void)   |  Callback is invoked when the slider slides  <br /> **value** - Current Value of the Slider <br /> **mode** - Dragging state or Mode of the Slider (SliderChangeMode Enum - Begin, Moving, End)    |
  
+## Slider Implementation with UseCases
+
 ### Continuous Slider
+
 Continuous sliders allow users to make selections that don’t require a specific value. These sliders are often used to adjust brightness or volume. A Pictorial representation of the Continuous Slider with its design parameters is shown below.
 
 <img width="499" alt="1_Continuous_slider_measurements" src="https://user-images.githubusercontent.com/107906555/177693805-b6afbc1c-2367-4921-b110-69999d12b358.PNG">
 
-The image shows the measurement of the Continuous Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part).
+The image shows the measurement of the Continuous Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part). The two variants of Continuous Slider are described below.
 
-#### OutSet - Usage
+#### OutSet
 
 ```js
 //Creating object of the SliderModel class with Slider type as Continue
@@ -153,7 +155,7 @@ Discrete sliders display a numeric value label upon pressing the thumb, allowing
 
 <img width="446" alt="2_Discrete_slider_measurements" src="https://user-images.githubusercontent.com/107906555/177693881-7aaa178c-4da7-4504-b32f-23a2a9191bec.PNG">
 
-The image shows the measurement of the Discrete Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part).
+The image shows the measurement of the Discrete Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part). The two variants of Discrete Slider are described below.
 
 #### OutSet - Usage
 
