@@ -77,7 +77,7 @@ Continuous sliders allow users to make selections that don’t require a specifi
 
 The image shows the measurement of the Continuous Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part). The two variants of Continuous Slider are described below.
 
-#### OutSet
+##### OutSet
 
 ```js
 //Creating object of the SliderModel class with Slider type as Continue
@@ -114,7 +114,7 @@ MaterialSlider({
 
 ![ContinuousOutset](https://user-images.githubusercontent.com/107906555/177507023-7415aa49-1236-4663-b893-fc96d76d5664.jpg)
 
-#### InSet - Usage
+##### InSet
 
 ```js
 //Creating object of the SliderModel class with Slider type as Continue 
@@ -157,7 +157,7 @@ Discrete sliders display a numeric value label upon pressing the thumb, allowing
 
 The image shows the measurement of the Discrete Slider to be followed (i.e.) the Slider diameter and track size (both unselected and selected part). The two variants of Discrete Slider are described below.
 
-#### OutSet - Usage
+##### OutSet
 
 ```js
 //Creating object of the SliderModel class with Slider type as Discrete 
@@ -193,7 +193,7 @@ MaterialSlider({
 ```
 ![DiscreteOutset](https://user-images.githubusercontent.com/107906555/177507151-c2e55b30-3e3a-48fc-92b7-20f9cb4be7a8.jpg)
 
-#### InSet - Usage
+##### InSet
 
 ```js
 //Creating object of the SliderModel class with Slider type as Discrete 
@@ -229,12 +229,28 @@ MaterialSlider({
 ```
 ![DiscreteInset](https://user-images.githubusercontent.com/107906555/177507177-f524121a-2845-4914-85c8-6176fe8e4483.jpg)
 
-## Snackbar
-Snackbars provide brief messages about app processes at the bottom of the screen. Snackbar informs the user that the application has performed or will be performing certain task. They appear at the bottom of the screen for a brief time. They do not interfere in user experience and do not wait for user input to disappear. A Snackbar can contain a single action that is optional.
+## Conclusion
+Thus, Material Slider can be used for various application/requirement. Material Slider implemented here is in OpenHarmony API version 9 and above. 
 
-![MaterialSnackbar](https://user-images.githubusercontent.com/107906555/177764745-3cc6fa15-d33e-46ea-8ec1-a5629ea37234.gif)
+## Snackbar
+Snackbars provide brief messages about app processes at the bottom of the screen. Snackbar informs the user that the application has performed or will be performing certain task. They appear at the bottom of the screen for a brief time. They do not interfere in user experience and do not wait for user input to disappear. A Snackbar can contain a single action that is optional. A typical Snackbar looks as shown below.
+
+![intro](https://user-images.githubusercontent.com/107906555/179459753-d90bc438-340e-4123-8368-c2378e303cfa.jpg)
 
 The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialSnackbar)
+
+## Benefits
+* Provides information about the process being performed.
+* Helps us to take appropriate action based on the outcome of the process.
+
+## List of Features
+The features of Snackbar implemented are listed below.
+
+| Fetaure   | Display | Description |
+| -------------| ------------| -----|
+| Customised Action  | ![intro](https://user-images.githubusercontent.com/107906555/179492375-6b43e330-bb27-4cef-97e5-950e61a8a4db.jpg)  | Button can have customised text and action based on the requirement  |
+|  Timer  |       |  The time for which Snackbar is visible can be altered  |
+|  Opacity  |       |  The opacity of the Snackbar can be customised  |
 
 ### Download and Install
 
@@ -246,13 +262,12 @@ npm i @ohos/materialsnackbar
 
 Details about OpenHarmony NPM environment configuration, click [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
 
-### Import
+## Usage Instructions
+Import the Snackbar Library. Then, access Snackbar attributes through a object of SnackBarModel and customize the Snackbar using setter functionS and finally pass the object to MaterialSnackBar and action associated with optional action button.
+
 ```js
 import { MaterialSnackBar, SnackBarModel, SnackBarType }  from "@ohos/materialsnackbar"
 ```
-
-### Usage
-Access Snackbar attributes through a object of SnackBarModel and customize the Snackbar using setter functionS and finally pass the object to MaterialSnackBar and action associated with optional action button.
 
  Below are list of properties available.
  | Properties   | Description | Type |
@@ -261,21 +276,21 @@ Access Snackbar attributes through a object of SnackBarModel and customize the S
  | snacBarText  |  Text associated with the Snackbar  | String  |
  | buttonText  |  Defines the text of the Snackbar button  | String |
  | show   |  Defines the visibility of the Snackbar  |  Visibility Enum (Visible, None) |
- | timer | Defines the number of seconds the Snackbar will be visible | number |
+ | timer | Defines the number of seconds the Snackbar will be visible | number (Default: 4000ms) |
  | snackBackColor  |  Background Color of the Snackbar  |  ResourceColor  |
  | snackTextColor  |  Defines the color of the Snackbar text  | ResourceColor  |
  | buttonTextColor  | Defines the color of the button text | ResourceColor  |
  | opacity  | Defines the opacity of the Snackbar  |  number (values range from 0-1) |
  |          |               |             |
  
- ### List of Snackbars
+ ## Snackbar implementation with UseCases
  
- #### Simple Snack
+ ### Simple Snack
  This is a Simple snackbar with just a message. There is no action associated with this type. The Picture describing the design parameters are shown below.
  
  <img width="593" alt="1_Text Snackbar_measurements" src="https://user-images.githubusercontent.com/107906555/177966156-fe97cc87-33a4-4eb9-bbc2-d57c2f623b1f.PNG">
 
-##### Usage
+##### Implementation
 
 ```js
 //Creating SnackBarModel object with the SnackBarType as SimpleSnack
@@ -298,12 +313,12 @@ MaterialSnackBar({
 
 ![SimpleSnack](https://user-images.githubusercontent.com/107906555/177968379-34ed90a3-cf41-4632-b278-339a397d3890.png)
  
-#### One Line Action Snackbar
+### One Line Action Snackbar
 This is a Snackbar with a one line message and a action associated with it. The Picture describing the design parameters are shown below.
 
 <img width="612" alt="2_Text Snackbar_Action_measurements" src="https://user-images.githubusercontent.com/107906555/177967519-b4f4681d-7b51-4f72-a464-51a6846c83ac.PNG">
 
-##### Usage
+##### Implementation
 
 ```js
 //Creating SnackBarModel object with the SnackBarType as OneLineActionSnack
@@ -333,12 +348,12 @@ MaterialSnackBar({
 
 ![OneLineActionSnack](https://user-images.githubusercontent.com/107906555/177968467-3baa3ddc-cd79-42aa-a446-8236f3eda64e.png)
 
-#### Two Line Action Snackbar
+### Two Line Action Snackbar
 This is a Snackbar with two line message and an action associated with it. The Picture describing the design parameters are shown below.
 
 <img width="620" alt="3_Two line Text Snackbar_measurements" src="https://user-images.githubusercontent.com/107906555/177990529-d73eae20-5a41-4ac6-8583-99b58f8f1f89.PNG">
 
-##### Usage
+##### Implementation
 
 ```js
 //Creating SnackBarModel object with the SnackBarType as TwoLineActionSnack
@@ -368,12 +383,12 @@ MaterialSnackBar({
 ```
 ![TwoLineActionSnack](https://user-images.githubusercontent.com/107906555/177991342-4fd7c8e2-c95b-484c-a206-d66dcdde719f.png)
 
-#### Big Line Action Snackbar
+### Big Line Action Snackbar
 This is a Snackbar with two line text and a longer action text. The Picture describing the design parameters are shown below.
 
 <img width="616" alt="4_Two line Text Snackbar_Action_measurements" src="https://user-images.githubusercontent.com/107906555/177991701-c8bdd372-4015-4fbd-9857-6792cea92b8c.PNG">
 
-##### Usage
+##### Implementation
 
 ```js
 //Creating SnackBarModel object with the SnackBarType as BigTwoLineActionSnack
@@ -403,6 +418,161 @@ MaterialSnackBar({
 ```  
 
 ![BigTwoLineActionSnack](https://user-images.githubusercontent.com/107906555/177992100-5301e50c-16ce-4498-a97e-0aa3934dc578.png)
+
+## conclusion
+Snackbar, which show brief messages about the process with an optional action, can be implemented in OpenHarmony as shown above. 
+
+## Backdrop
+A backdrop appears behind all other surfaces in an app, displaying contextual and actionable content. A Backdrop has two surfaces.
+
+*1. Back Layer
+*2. Front Layer
+
+Back layer displays actions and context that controls the Front layer's content. When concealed, the back layer can provide contextual information about the front layer. When revealed, the back layer displays contextual controls that relate to the front layer. Back layer content can be navigational, changing the content displayed on the front layer. A typical Backdrop is shown below.
+
+![intro](https://user-images.githubusercontent.com/107906555/179497409-63047084-4e85-4841-a04d-b1807b737c8e.jpg)
+
+The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialBackdrop)
+
+## Benefits
+* Backlayer is persistent that displays controls and content related to front layer.
+* Filtering of front layer content made easy
+* Focuses attention on one layer at a time.
+
+## List of Features
+The features of Slider implemented are listed below.
+
+| Fetaure   |  Description |
+| ----------| -----|
+| Customisable UI |  The Front Layer and Back Layer can have customisable UI based on the requirements  |
+|  Triggering Element  | User can choose the triggering element for revealing and concealing the Backdrop  |
+
+## Download and Install
+
+To use MaterialBackdrop component for OpenHarmony, please use the below instruction
+
+```js
+npm i @ohos/materialbackdrop
+```
+
+Details about OpenHarmony NPM environment configuration, click [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
+
+## Usage Instructions
+
+Import the Backdrop Library. Create a object of BackdropModel class using appropriate type of Backdrop. Create two UI which will act as front layer and back layer and pass them along with the BackdropModel object to the library.
+
+```js
+import { Backdrop, BackdropModel, BackDropState, BackdropType }  from '@ohos/materialbackdrop'
+```
+
+Below are list of properties available in BackdropModel
+| Properties   | Description | Type |
+| -------------| ------------| -----|
+| backdropType | Specifies the type of the Backdrop  |  BackdropTyp Enum (Model1, Model2)  |
+|  backContentHeight  |  Mentiones the height of the back content | Length |
+|   |    |
+
+## Backdrop Implemntation with UseCases
+
+### Model1
+
+Model 1 of Backdrop is where the Front Layer is fully concealed when Back Layer is revealed. The Pictures describing the design parameters are shown below.
+
+<img width="404" alt="1_Back Drop_measurements" src="https://user-images.githubusercontent.com/107906555/179502254-be6bfce2-f2be-485e-82f1-8469257b9c2a.PNG">
+
+<img width="428" alt="2_Back Drop_bottom_measurements" src="https://user-images.githubusercontent.com/107906555/179503006-5ef93aed-3ee3-49fd-94d0-8d725a19b494.PNG">
+
+##### Implementation
+
+```js
+//Creating object of BackdropModel
+private model: BackdropModel = new BackdropModel(BackdropType.Model1)
+
+//UI for Back layer
+@Builder backPage():any {
+    .
+    .
+    triggerringElement(){
+        .
+        .
+        }.onClick(()=>{
+            //Change BackDropState
+            triggerBackdrop(this.flag)   //pass value of BackdropState
+            })
+    .
+    .
+}
+
+//UI for Front layer    
+@Builder frontPage():any {
+    .
+    .
+    //Add triggerring element if needed
+    .
+}   
+
+//Passing parameters to Backdrop component
+Backdrop({
+        obj: $model,
+        backLayout: this.backPage(),
+        frontLayout: this.frontPage()
+})
+```
+
+![4](https://user-images.githubusercontent.com/107906555/179505230-9e204169-d756-4f63-ba67-1c0a34a8505d.gif)
+
+### Model2
+
+Model 2 of Backdrop is where the Front Layer is only half concealed when Back Layer is revealed. 
+
+##### Implementation
+Create and pass UIs as mentioned in Model 1. The difference of model 2 can be noticed when the back content height is less than the whole screen height.
+
+```js
+//Creating object of BackdropModel
+private model: BackdropModel = new BackdropModel(BackdropType.Model2)
+
+//Setting the content height
+aboutToAppear() {
+  this.backdrop.setBackContentHeight('176vp')
+}
+  
+//UI for Back layer
+@Builder backPage():any {
+    .
+    .
+    triggerringElement(){
+        .
+        .
+        }.onClick(()=>{
+            //Change BackDropState
+            triggerBackdrop(this.flag)   //pass value of BackdropState
+            })
+    .
+    .
+}
+    
+//UI for Front layer
+@Builder frontPage():any {
+    .
+    .
+    //Add triggerring element if needed
+    .
+    .
+}   
+    
+//Passing parameters to Backdrop component
+Backdrop({
+        obj: $model,
+        backLayout: this.backPage(),
+        frontLayout: this.frontPage()
+})
+```
+
+![5](https://user-images.githubusercontent.com/107906555/179506902-f8fbc169-a0da-4f4d-85fb-e267304c7168.gif)
+
+## Conclusion
+This library is a solution for applications like e-commerce where the backdrop implementation is much needed for display of products and filter. Material Backdrop implemented here is in OpenHarmony API version 9 and above. 
 
 ## Banners
 Banners display important message and provides user action to address or dismiss the banner. Banners are displayed at the top of the screen below the app bar. They are persistent, allowing the user to ignore them or interact with them when needed. Only one banner should be displayed at a time.
