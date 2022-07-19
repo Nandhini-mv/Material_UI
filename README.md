@@ -419,7 +419,7 @@ MaterialSnackBar({
 
 ![BigTwoLineActionSnack](https://user-images.githubusercontent.com/107906555/177992100-5301e50c-16ce-4498-a97e-0aa3934dc578.png)
 
-## conclusion
+## Conclusion
 Snackbar, which show brief messages about the process with an optional action, can be implemented in OpenHarmony as shown above. 
 
 ## Backdrop
@@ -575,9 +575,9 @@ Backdrop({
 This library is a solution for applications like e-commerce where the backdrop implementation is much needed for display of products and filter. Material Backdrop implemented here is in OpenHarmony API version 9 and above. 
 
 ## Banners
-Banners display important message and provides user action to address or dismiss the banner. Banners are displayed at the top of the screen below the app bar. They are persistent, allowing the user to ignore them or interact with them when needed. Only one banner should be displayed at a time.
+Banners display important message and provides user action to address or dismiss the banner. Banners are displayed at the top of the screen below the app bar. They are persistent, allowing the user to ignore them or interact with them when needed. Only one banner should be displayed at a time. A Typical Material Banner looks as shown below.
 
-![MaterialBanner](https://user-images.githubusercontent.com/107906555/178459041-e9718862-8804-4aea-b073-8d6712a8e8de.gif)
+
 
 The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialBanners)
 
