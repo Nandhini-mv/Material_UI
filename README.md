@@ -440,7 +440,7 @@ The Library can be referred from [here](https://github.com/Applib-OpenHarmony/Ma
 * Focuses attention on one layer at a time.
 
 ## List of Features
-The features of Slider implemented are listed below.
+The features of Backdrop implemented are listed below.
 
 | Fetaure   |  Description |
 | ----------| -----|
