@@ -425,8 +425,8 @@ Snackbar, which show brief messages about the process with an optional action, c
 ## Backdrop
 A backdrop appears behind all other surfaces in an app, displaying contextual and actionable content. A Backdrop has two surfaces.
 
-* 1. Back Layer
-* 2. Front Layer
+1. Back Layer
+2. Front Layer
 
 Back layer displays actions and context that controls the Front layer's content. When concealed, the back layer can provide contextual information about the front layer. When revealed, the back layer displays contextual controls that relate to the front layer. Back layer content can be navigational, changing the content displayed on the front layer. A typical Backdrop is shown below.
 
