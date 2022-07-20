@@ -19,7 +19,7 @@ The Library can be referred from [here](https://github.com/Applib-OpenHarmony/Ma
 ## List of Features
 The features of Slider implemented are listed below.
 
-| Fetaure   | Display | Description |
+| Feature   | Display | Description |
 | -------------| ------------| -----|
 |  Reverse Slider  |![Feature1](https://user-images.githubusercontent.com/107906555/179450124-d3aa73c6-97b0-430e-9de6-a625777c99ef.jpg)  |  Slider can be moved in the reverse direction  |
 |  Horizontal/Vertical Slider  | ![Feature 2](https://user-images.githubusercontent.com/107906555/179450433-80e84510-2fdd-4fe5-847f-1e6e8465d2da.jpg)  |  Slider can be viewed in the vertical direction as well  |
@@ -233,7 +233,7 @@ MaterialSlider({
 Thus, Material Slider can be used for various application/requirement. Material Slider implemented here is in OpenHarmony API version 9 and above. 
 
 ## Snackbar
-Snackbars provide brief messages about app processes at the bottom of the screen. Snackbar informs the user that the application has performed or will be performing certain task. They appear at the bottom of the screen for a brief time. They do not interfere in user experience and do not wait for user input to disappear. A Snackbar can contain a single action that is optional. A typical Snackbar looks as shown below.
+**Snackbars** provide brief messages about app processes at the bottom of the screen. Snackbar informs the user that the application has performed or will be performing certain task. They appear at the bottom of the screen for a brief time. They do not interfere in user experience and do not wait for user input to disappear. A Snackbar can contain a single action that is optional. A typical Snackbar looks as shown below.
 
 ![intro](https://user-images.githubusercontent.com/107906555/179459753-d90bc438-340e-4123-8368-c2378e303cfa.jpg)
 
@@ -246,7 +246,7 @@ The Library can be referred from [here](https://github.com/Applib-OpenHarmony/Ma
 ## List of Features
 The features of Snackbar implemented are listed below.
 
-| Fetaure   | Display | Description |
+| Feature   | Display | Description |
 | -------------| ------------| -----|
 | Customised Action  | ![intro](https://user-images.githubusercontent.com/107906555/179492375-6b43e330-bb27-4cef-97e5-950e61a8a4db.jpg)  | Button can have customised text and action based on the requirement  |
 |  Timer  |       |  The time for which Snackbar is visible can be altered  |
@@ -423,7 +423,7 @@ MaterialSnackBar({
 Snackbar, which show brief messages about the process with an optional action, can be implemented in OpenHarmony as shown above. 
 
 ## Backdrop
-A backdrop appears behind all other surfaces in an app, displaying contextual and actionable content. A Backdrop has two surfaces.
+A **backdrop** appears behind all other surfaces in an app, displaying contextual and actionable content. A Backdrop has two surfaces.
 
 1. Back Layer
 2. Front Layer
@@ -442,7 +442,7 @@ The Library can be referred from [here](https://github.com/Applib-OpenHarmony/Ma
 ## List of Features
 The features of Backdrop implemented are listed below.
 
-| Fetaure   |  Description |
+| Feature   |  Description |
 | ----------| -----|
 | Customisable UI |  The Front Layer and Back Layer can have customisable UI based on the requirements  |
 |  Triggering Element  | User can choose the triggering element for revealing and concealing the Backdrop  |
@@ -577,11 +577,22 @@ This library is a solution for applications like e-commerce where the backdrop i
 ## Banners
 Banners display important message and provides user action to address or dismiss the banner. Banners are displayed at the top of the screen below the app bar. They are persistent, allowing the user to ignore them or interact with them when needed. Only one banner should be displayed at a time. A Typical Material Banner looks as shown below.
 
-
+![intro](https://user-images.githubusercontent.com/107906555/179958700-18e614b6-aab5-4d1f-99b4-d3b41780ed58.jpg)
 
 The Library can be referred from [here](https://github.com/Applib-OpenHarmony/MaterialBanners)
 
-### Download and Install
+## Benefits
+* Banners contain a single message and subsequent action the user can take. This makes the banner message more clear.
+
+## List of features
+The features of Banner implemented are listed below.
+
+| Feature   | Description |
+| -------------| -----|
+| Banner Type  |  Type of the banner can be changed according to the requirement |
+| Visibility | The Visibility can be changed according to the requirement  |
+
+## Download and Install
 
 To use MaterialBanner component for OpenHarmony, please use the below instruction
 
@@ -591,13 +602,12 @@ npm i @ohos/material-banner
 
 Details about OpenHarmony NPM environment configuration, click [here](https://gitee.com/openharmony-tpc/docs/blob/master/OpenHarmony_npm_usage.md)
 
-### Import
+## Usage Instructions
+Import the banner library. Access banner attributes using an object of BannerModel and customize the banner using setter functions and finally pass the object to MaterialBanner.
+
 ```js
 import {MaterialBanner,BannerType,BannerModel} from '@ohos/material-banner'
 ```
-
-### Usage
-Access banner attributes using an object of BannerModel and customize the banner using setter functions and finally pass the object to MaterialBanner.
 
 Below are the list of properties available for MaterialBanner.
 | Properties   | Description | Type |
@@ -613,14 +623,14 @@ Below are the list of properties available for MaterialBanner.
 | show  |  Defines the Visibility of the Banner  | Visibility  |
 |     |      |     |
 
-### List of Banners
+## Banner Implementation with Usecases
 
-#### One Button Banner
+### One Button Banner
 This type of Banner has a message and one button associated with it. The picture describing the design parameters are shown below.
 
 <img width="432" alt="1_Banner_one-line_measurements" src="https://user-images.githubusercontent.com/107906555/178465214-31745e76-bf9b-4082-af36-87659cdb9b6f.PNG">
 
-##### Usage
+##### Implementation
 
 ```js
 //Creating object of BannerModel with BannerType as OneButton
@@ -647,14 +657,15 @@ MaterialBanner({
 })
 ```
 
-![OneButton](https://user-images.githubusercontent.com/107906555/178469398-0d4b9e24-0bd6-4e8a-a86a-d258e02ec124.jpg)
+![Banner1](https://user-images.githubusercontent.com/107906555/179961870-15335c2d-4d3f-471e-9b3a-ee4bb9fec587.jpg)
 
-#### Two Button Banner
+### Two Button Banner
 This type of Banner has a message and two buttons associated with it. The picture describing the design parameters are shown below.
 
 <img width="424" alt="2_Banner_Two-line_measurements" src="https://user-images.githubusercontent.com/107906555/178469557-2b1a7713-5c5b-4adc-b8b4-7cccd41650fe.PNG">
 
-##### Usage
+##### Implementation
+
 ```js
 //Creating object of BannerModel with BannerType as TwoButton
 private bannerModel2:BannerModel=new BannerModel(BannerType.TwoButton)
@@ -685,3 +696,47 @@ MaterialBanner({
 })
 ```
 
+![Banner2](https://user-images.githubusercontent.com/107906555/179962001-283cc473-3662-4647-819a-2a56c3077508.jpg)
+
+### Image Banner
+Banner message here is supplemented with a supporting illustration (image). The picture describing the design parameters are shown below.
+
+<img width="423" alt="3_Banner_Two-line_image_measurements" src="https://user-images.githubusercontent.com/107906555/179962315-0b99982e-4b39-4be3-8a57-96f236d1934e.PNG">
+
+##### Implementation
+
+```js
+//Creating object of BannerModel with BannerType as TwoButton
+private bannerModel3:BannerModel=new BannerModel(BannerType.ImageButton)
+
+//Setting Banner Button Functions
+BannerFunc3:()=>void=function(){
+  console.log("Learn More")
+}
+BannerFunc4:()=>void=function(){
+  console.log("Fix it")
+}
+  
+//Setting the model object parameters with appropriate values
+aboutToAppear(){  
+  this.bannerModel2.setBannerMessage("Message Text");  
+  this.bannerModel2.setButtonText1("ACTION1")  
+  this.bannerModel2.setButtonText2("ACTION2")  
+  this.bannerModel2.setButtonColor("#317AFF")  
+  this.bannerModel2.setTextSize('16fp')  
+  this.bannerModel2.setTextStyle('calibri')
+  this.bannerModel3.setImage(this.image)
+}
+
+//Passing BannerModel object to MaterialBanner component
+MaterialBanner({  
+  bModel: this.bannerModel3,  
+  buttonAction1: this.BannerFunc3,  
+  buttonAction2: this.BannerFunc4  
+})
+```
+
+![Banner3](https://user-images.githubusercontent.com/107906555/179963136-3cc96df9-3cde-4d85-9f7b-ee24dec967d7.jpg)
+
+## Conclusion
+Banners convey messages and related action and are persistent allowing users to ignore them. Here, we have implemented Banners in OpenHarmony API version 9.
